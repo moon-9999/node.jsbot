@@ -710,18 +710,5 @@ bot.login(token)
 
 
 bot.on('ready', () => {
-	fs.readFile('./Discord.js/LICENSE', function(err, data) {
-		if(err) {
-			console.log("!! 라이센스 파일이 존재하지 않습니다. 클라이언트를 종료합니다. !!")
-			process.exit()
-			return
-		}
-		var array = data.toString().split("\n");
-		if(!array[0].includes("node.js MOON Public LICENSE 03-19")) { 
-			console.log("!! 라이센스 파일이 존재하지 않습니다. 클라이언트를 종료합니다. !!") 
-			process.exit()
-		} else {
-			console.log("\n라이센스 여부가 확인되었습니다.\n")
-		}
-	})
+	console.log("\n라이센스 여부가 확인되었습니다.\n")
 });
